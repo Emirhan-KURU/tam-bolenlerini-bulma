@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main(void)
+{
+    int x, i, j, y[100];
+
+    printf("Bir sayi giriniz:\t");
+    scanf("%d",&x);
+
+    for(i=x,j=0;i>0;i--){
+        if(x%i ==0){
+        y[j] = i;
+        j++;
+        }
+    }
+    for(i=0;i<j;i++)
+        y[j+i] = -1*y[i];
+    printf("%d sayisinin tam bolenleri: \n",x);
+    for(i=0;i<j*2;i++)
+        printf("%d ",y[i]);
+
+    return 0;
+}
